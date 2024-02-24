@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background-color: #f0f0f0
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px; 
+      overflow: hidden; 
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 80%;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid black;
+      padding: 2%;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+
+    #wow {
+      text-align: center;
+      background-color: #333;
+      color: white; 
+      padding: 4%;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var person = {
+      Name: "Marvilyn Frias",
+      Age: 17,
+      Occupation: "Student"
+    };
+
+    var car = {
+      Favorite_Car: "Toyota",
+      Model: "Corolla",
+      Color: "red"
+    };
+
+    var book = {
+      Favorite_Book: "The Catcher in the Rye",
+      Author: "J.D. Salinger",
+      Genre: "fiction"
+    };
+
+    var animal = {
+      Favorite_Animal: "Dog",
+      Name: "Rizz",
+      Color: "Brown"
+    };
+
+    var food = {
+      Favorite_Food: "Spicy Foods",
+      Example: "Potato Corner with Spicy BBQ Flavor",
+      Favorite_Place: "Jollibee"
+    };
+    var objects = [person, car, book, animal, food];
+    function displayObjects() {
+      var table = document.getElementById("objects-table");
+      for (var i = 0; i < objects.length; i++) {
+        var row = table.insertRow(i + 1);
+        var keys = Object.keys(objects[i]);
+        var values = Object.values(objects[i]);
+        for (var j = 0; j < keys.length; j++) {
+          var cell = row.insertCell(j);
+          if (j == 0) {
+            cell.innerHTML = "<b>" + keys[j].replace("_", " ") + "</b>: " + values[j];
+          } else {
+            cell.innerHTML = keys[j].replace("_", " ") + ": " + values[j];
+          }
+        }
+      }
+    }
+
+    window.onload = displayObjects;
+  </script>
+  <table id="objects-table">
+    <tr>
+      <th colspan="3" id="wow">5 Objects with Properties</th>
+    </tr>
+  </table>
+</body>
+</html>
