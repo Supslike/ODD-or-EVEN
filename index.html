@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Odd OR Even</title>
+    <title>Odd AND Even</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="profile.png" type="image/x-icon">
 </head>
 <body>
-    <div class="headline">
-        <h1>ODD OR EVEN</h1>
+    <div class="title-page">
+        <h2>Odd and Even</h2>
+        <h3>Sum of Even Numbers: </h3>
+        <span id="res">0</span>
     </div>
-    <div class="displayer" id="display">
-        <div class="container" id="odd-containers">
-            <h3>ODD Numbers</h3>
-            <div class="int-holder" id="odd-container"></div>
+    <div class="container">
+        <div class="item-container">
+            <div class="outline">
+                <div id="odd-container" class="items">
+
+                </div>
+            </div>
+            <div class="label">
+                <h2 id="odd-label">ODD</h2>
+            </div>
         </div>
-        <div class="container" id="even-containers">
-            <h3>EVEN Numbers</h3>
-            <div class="int-holder" id="even-container"></div>
-        </div>
-    </div>
-    <div class="result">
-        <h2>SUM OF EVEN: </h2>
-        <div class="holder">
-            <p id="res" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; will-change: transform;"></p>
+        <div class="item-container">
+            <div class="outline">
+                <div id="even-container" class="items">
+
+                </div>
+            </div>
+            <div class="label">
+                <h2 id="even-label">EVEN</h2>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
